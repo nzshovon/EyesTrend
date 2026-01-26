@@ -4,6 +4,10 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Eye Trends - Spectacle Service Provider</title>
+
+    <!-- Ensure correct subpath when served on GitHub Pages -->
+    <base href="/EyesTrend/">
+
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
@@ -104,7 +108,7 @@
   }
 }
 </script>
-<link rel="stylesheet" href="/index.css">
+<link rel="stylesheet" href="index.css">
 </head>
   <body>
     <div id="initial-loader">
@@ -114,7 +118,7 @@
     </div>
     <div id="root"></div>
     <!-- Vite handles the script import automatically during build -->
-    <script type="module" src="/index.tsx"></script>
+    <script type="module" src="index.tsx"></script>
     <script>
       window.addEventListener('load', () => {
         setTimeout(() => {
