@@ -4,6 +4,10 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Eye Trends - Spectacle Service Provider</title>
+    <!-- If deploying to GitHub Pages under <user>.github.io/EyesTrend, use: -->
+    <base href="/EyesTrend/">
+
+    <!-- Tailwind (for dev only, see note below) -->
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
@@ -20,7 +24,6 @@
       }
       .scrollbar-hide::-webkit-scrollbar { display: none; }
       .scrollbar-hide { -ms-overflow-style: none; scrollbar-width: none; }
-      
       #initial-loader {
         position: fixed;
         inset: 0;
@@ -66,7 +69,6 @@
         0% { transform: translateX(-100%); }
         100% { transform: translateX(300%); }
       }
-
       /* Print specific styles */
       @media print {
         body * {
@@ -90,22 +92,7 @@
         }
       }
     </style>
-  <script type="importmap">
-{
-  "imports": {
-    "react": "https://esm.sh/react@^19.2.3",
-    "react-dom/": "https://esm.sh/react-dom@^19.2.3/",
-    "react/": "https://esm.sh/react@^19.2.3/",
-    "firebase/": "https://esm.sh/firebase@^12.7.0/",
-    "@google/genai": "https://esm.sh/@google/genai@^1.35.0",
-    "recharts": "https://esm.sh/recharts@^3.6.0",
-    "vite": "https://esm.sh/vite@^7.3.1",
-    "@vitejs/plugin-react": "https://esm.sh/@vitejs/plugin-react@^5.1.2"
-  }
-}
-</script>
-<link rel="stylesheet" href="/index.css">
-</head>
+  </head>
   <body>
     <div id="initial-loader">
       <div class="loader-logo"><i class="fa-solid fa-glasses"></i></div>
@@ -113,8 +100,8 @@
       <p style="color: white; font-size: 10px; font-weight: 900; letter-spacing: 0.2em; margin-top: 16px; opacity: 0.5;">EYE TRENDS PRO</p>
     </div>
     <div id="root"></div>
-    <!-- Vite handles the script import automatically during build -->
-    <script type="module" src="/index.tsx"></script>
+    <!-- For dev only; in production Vite rewrites asset links -->
+    <script type="module" src="index.tsx"></script>
     <script>
       window.addEventListener('load', () => {
         setTimeout(() => {
